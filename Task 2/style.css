@@ -1,96 +1,208 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f6f8;
-  color: #334155;
-}
-
-/* VIDEO SECTION — NO CROPPING */
-.video-section {
+/* HERO */
+.hero {
   position: relative;
+  height: 100vh;
   width: 100%;
-  background: black;
-  text-align: center;
+  overflow: hidden;
+  font-family: 'Rajdhani', sans-serif;
 }
 
-/* THIS IS THE MOST IMPORTANT FIX */
-.video-section video {
-  width: 100%;
-  height: auto;      /* keeps full video */
-  max-height: 90vh;  /* prevents too tall video */
-}
-
-/* HERO TITLE */
-.hero-title {
+.video-bg {
   position: absolute;
-  bottom: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 12px 24px;
-  border-radius: 14px;
 }
 
-.hero-title h1 {
-  margin: 0;
-  font-size: 38px;
+.hero-content h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: #ffb347;
+  text-shadow: 0 0 20px rgba(255,179,71,0.7);
 }
 
-.hero-title p {
-  margin-top: 6px;
-  font-size: 16px;
-  opacity: 0.9;
+.hero-content p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  letter-spacing: 2px;
 }
 
-/* BIO SECTION */
-.bio-section {
-  padding: 70px 20px;
+.hero-content span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #ccc;
 }
 
-/* BIO CARD */
-.bio-card {
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 45px;
-  border-radius: 22px;
+/* STATS */
+.stats-bar {
+  background: #111;
+  padding: 40px 10%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: #1c1c1c;
+  padding: 25px;
   text-align: center;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-/* IMAGE */
-.bio-card img {
-  width: 220px;
-  border-radius: 18px;
-  margin-bottom: 25px;
+.stat-box:hover {
+  transform: translateY(-8px);
+  background: #222;
 }
 
-/* SUBTITLE */
-.bio-card h2 {
-  color: #1e3a8a;
-  margin-bottom: 25px;
-  font-weight: 500;
+.stat-box h3 {
+  font-size: 2.5rem;
+  color: #ffb347;
 }
 
-/* TEXT */
-.bio-card p {
-  font-size: 16px;
-  line-height: 1.9;
-  margin-bottom: 18px;
+.stat-box p {
+  margin-top: 8px;
+  color: #ccc;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 80px 10%;
+  background: #0f0f0f;
+  color: white;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #ffb347;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* ADMIRATION */
+.admiration {
+  background: #111;
+  padding: 80px 10%;
+  text-align: center;
+  color: white;
+}
+
+.admiration h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffb347;
+}
+
+.admire-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.admire-card {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.admire-card:hover {
+  transform: translateY(-8px);
+  background: #222;
+}
+
+.admire-card h3 {
+  color: #ffb347;
+  margin-bottom: 10px;
+}
+
+/* CAREER */
+.career {
+  background: #0f0f0f;
+  padding: 80px 10%;
+  color: white;
+  text-align: center;
+}
+
+.career h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffb347;
+}
+
+.career-text {
+  max-width: 800px;
+  margin: auto;
+}
+
+.career-text p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #ddd;
 }
 
 /* QUOTE */
 .quote {
-  margin-top: 35px;
-  padding: 22px;
-  font-style: italic;
-  background: #f1f5f9;
-  border-left: 6px solid #2563eb;
-  border-radius: 12px;
+  background: linear-gradient(45deg, #000, #1c1c1c);
+  padding: 80px 10%;
+  text-align: center;
+  color: #ffb347;
+}
+
+.quote h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.quote p {
+  color: #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  padding: 25px;
+  text-align: center;
+  color: #888;
 }
