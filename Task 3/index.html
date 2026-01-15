@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FocusFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>FocusFlow</h1>
+    <p class="tagline">Discipline today. Success tomorrow.</p>
+    <p id="quote" class="quote"></p>
+  </header>
+
+  <!-- APP -->
+  <main class="app">
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat">
+        <h2 id="pendingCount">0</h2>
+        <p>Pending Tasks</p>
+      </div>
+      <div class="stat">
+        <h2 id="completedCount">0</h2>
+        <p>Completed Tasks</p>
+      </div>
+    </section>
+
+    <!-- INPUT -->
+    <section class="task-input">
+      <input id="taskText" placeholder="What is your main focus today?">
+      <select id="priority">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <input type="datetime-local" id="taskTime">
+      <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <!-- BOARDS -->
+    <section class="boards">
+      <div class="board">
+        <h3>Pending</h3>
+        <ul id="pending"></ul>
+      </div>
+
+      <div class="board">
+        <h3>Completed</h3>
+        <ul id="completed"></ul>
+      </div>
+    </section>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
