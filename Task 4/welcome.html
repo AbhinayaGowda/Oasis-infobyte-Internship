@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+
+<div class="welcome-card">
+  <h1>Welcome 🎉</h1>
+  <h2 id="userName"></h2>
+
+  <p>
+    You have successfully logged in.
+    This is your secure space.
+  </p>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+if (!localStorage.getItem("loggedIn")) {
+  window.location.href = "index.html";
+}
+
+document.getElementById("userName").innerText =
+  localStorage.getItem("currentUser");
+
+function logout() {
+  localStorage.clear();
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

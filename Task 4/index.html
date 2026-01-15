@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Login to continue</p>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p class="small-text">
+      Don’t have an account?
+      <span onclick="toggleRegister()">Create one</span>
+    </p>
+
+    <div id="registerBox" class="register hidden">
+      <h2>Create Account</h2>
+      <input id="newUser" placeholder="New Username">
+      <input id="newPass" type="password" placeholder="New Password">
+      <button onclick="register()">Register</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

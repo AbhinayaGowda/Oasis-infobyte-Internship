@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: #3a2745;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e2e2e;
+}
+
+.welcome-card {
+  background: #77408a;
+  padding: 60px;
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.welcome-card h1 {
+  font-size: 36px;
+}
+
+.welcome-card h2 {
+  font-size: 18px;
+  color: #191f2b;
+  margin-bottom: 24px;
+}
+
+.welcome-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* SAME BUTTON FEEL */
+button {
+  padding: 14px 30px;
+  border-radius: 18px;
+  border: none;
+  background: #231b1a;
+  color: #917878;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgb(145 117 113 / 35%);
+}
